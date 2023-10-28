@@ -49,4 +49,4 @@ A summary: Summarize the results from the machine learning model. Include your j
 
 
 Resources:
-- 
+- https://scikit-learn.org
