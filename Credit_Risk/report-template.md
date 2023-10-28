@@ -2,13 +2,14 @@
 
 ## Overview of the Analysis
 
-In this section, describe the analysis you completed for the machine learning models used in this Challenge. 
+The purpose of this analysis was to evaluate a supervised learning model which predicted whether a given loan application should be classified as high or low risk. The model was trained on historic activity provided by lending services company. 
+
+Inputs evaluated included loan size, borrower income, interest rate, and debt to income ratio. The "y" variable represented the loan status (our target), while the "X" variable represented the features (the numeric inputs needed to reach the target).
+
+I ran two separate analysis, the first based on the original given data, then a second based on "random over-sampling". In each case the data was split into test and training sets, the Logistic Regression Model was setup, and the predictions were made. Finally, I used a Confusion Matrix to analyze the results.
 
 
-* Explain the purpose of the analysis.
-* Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
-* Describe the stages of the machine learning process you went through as part of this analysis.
+Describe the stages of the machine learning process you went through as part of this analysis.
 * Briefly touch on any methods you used (e.g., `LogisticRegression`, or any resampling method).
 
 ## Results
