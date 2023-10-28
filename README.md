@@ -51,3 +51,4 @@ A summary: Summarize the results from the machine learning model. Include your j
 Resources:
 - https://scikit-learn.org
 - https://stackoverflow.com/questions/76593906/how-to-resolve-cannot-import-name-missingvalues-from-sklearn-utils-param-v
+- TA Slack chat
