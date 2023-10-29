@@ -8,25 +8,39 @@ Inputs evaluated included loan size, borrower income, interest rate, and debt to
 
 I ran two separate analysis, the first based on the original given data, then a second based on "random over-sampling". In each case the data was split into test and training sets, the Logistic Regression Model was setup, and the predictions were made. Finally, I used a Confusion Matrix to analyze the results.
 
-
-Describe the stages of the machine learning process you went through as part of this analysis.
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any resampling method).
-
 ## Results
 
-Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all machine learning models.
+Brief review of terminology.
+
+* Accuracy:
+    * How often the model is correct.
+    * Comprised of the ratio of correctly predicted observations to the total number of observations.
+    * Accuracy does not communicate how precise a model is.
+
+* Precision:
+    * The ratio of correctly predicted positive observations to thetotal predicted positive observations. 
+    * High precision relates to a low false positive rate.
+    * In other words, high precision will reduce recall.
+
+* Recall:
+    * The ratio of correctly predicted positive observations to all predicted observations for that class. 
+    * High recall correlates to a more comprehensive output and a low false negative rate.
+    * In other words, high recall will reduce precision
+
+
+Describing the observed balanced accuracy, precision, and recall scores of all machine learning models.
 
 * Machine Learning Model 1:
-  * Accuracy: 
-  * Precision: 
+  * Accuracy: .95
+  * Precision: 1
   * Recall: 
 
 
 
-* Machine Learning Model 2:
-  * Accuracy: 
-  * Precision: 
-  * Recall: 
+* Machine Learning Model 2: clean sweep at .99
+  * Accuracy: .99
+  * Precision: .99
+  * Recall: .99
 
 
 ## Summary
@@ -36,3 +50,8 @@ Summarize the results of the machine learning models, and include a recommendati
 * Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
 
 
+Given the nature of our assignment, it was crucial to ensure that our model could correctly predict when an application was low risk.
+
+At 95% accuracy, the first model appeared to do a very good job predicting which loans will be healthy as opposed to high-risk. However, the model was flawed in that it is lopsided- it contained far more healthy loan entries. If put to use, many high-risk applications could receive approval which may then lead to losses for the loan company. I would not use this model.
+
+Instead, I would opt for the second model. The resampled set had a balance of healthy vs unhealthy loans and the resulting accuracy increased to 99%
