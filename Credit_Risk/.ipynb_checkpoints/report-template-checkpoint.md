@@ -18,7 +18,7 @@ Brief review of terminology.
     * Accuracy does not communicate how precise a model is.
 
 * Precision:
-    * The ratio of correctly predicted positive observations to thetotal predicted positive observations. 
+    * The ratio of correctly predicted positive observations to the total predicted positive observations. 
     * High precision relates to a low false positive rate.
     * In other words, high precision will reduce recall.
 
@@ -32,9 +32,13 @@ Describing the observed balanced accuracy, precision, and recall scores of all m
 
 * Machine Learning Model 1:
   * Accuracy: .95
-  * Precision: 1
-  * Recall: 
-
+    High accuracy is misleading. While it did correctly predict a high rate of low-risk applications, the majority of the studied data were low-risk.
+    
+  * Precision: 1/.85
+    We saw a high level of true positive rates in this model, and low false positives.
+  
+  * Recall: .99/.91
+    Falling in line with the above description, recall scores are lower when precision is high, and higher when precision is lower. We witnessed a low number of false positives.
 
 
 * Machine Learning Model 2: clean sweep at .99
@@ -50,7 +54,7 @@ Summarize the results of the machine learning models, and include a recommendati
 * Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
 
 
-Given the nature of our assignment, it was crucial to ensure that our model could correctly predict when an application was low risk.
+Given the nature of our assignment, it was crucial to ensure that our model could correctly predict when an application was low risk. We do not want to miss an opportunity to provide a loan when conditions are favorable. Both models leaned n the  cautious side and rejected 
 
 At 95% accuracy, the first model appeared to do a very good job predicting which loans will be healthy as opposed to high-risk. However, the model was flawed in that it is lopsided- it contained far more healthy loan entries. If put to use, many high-risk applications could receive approval which may then lead to losses for the loan company. I would not use this model.
 
